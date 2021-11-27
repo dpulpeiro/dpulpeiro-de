@@ -1,0 +1,15 @@
+[submodule "st"]
+	path = st
+	url = git@github.com:dpulpeiro/st.git
+[submodule "dwm"]
+	path = dwm
+	url = git@github.com:dpulpeiro/dwm.git
+[submodule "dwmblocks"]
+	path = dwmblocks
+	url = git@github.com:dpulpeiro/dwmblocks.git
+[submodule "dmenu"]
+	path = dmenu
+	url = git@github.com:dpulpeiro/dmenu.git
+[submodule "pamixer"]
+	path = pamixer
+	url = git@github.com:cdemoulins/pamixer.git

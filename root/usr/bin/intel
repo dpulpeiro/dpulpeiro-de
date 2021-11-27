@@ -1,0 +1,4 @@
+#!/bin/bash
+cp /etc/X11/xorg_intel.conf  /etc/X11/xorg.conf
+(cd /opt/dpulpeiro-de/st && cp config_intel.h config.h && make install)
+systemctl restart nodm

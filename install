@@ -1,0 +1,22 @@
+#!/bin/sh
+apt install -y build-essential libx11-dev libxft-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev maim xclip
+
+(cd dwm && make clean install)
+(cd dmenu && make clean install)
+(cd dwmblocks && make clean install)
+(cd st && make clean install)
+(
+  cp -r root/* / 
+#  sed s/NODM_USER=/NODM_USER=$USER/g -i /etc/default/nodm
+)
+(cd pamixer && meson setup build && meson compile -C build&& meson install -C build)
+(
+  git clone https://github.com/powerline/fonts.git --depth=1 
+  cd fonts 
+  ./install.sh 
+  cd .. 
+  rm -rf fonts
+)
+
+./clean
+systemctl restart nodm
