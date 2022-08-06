@@ -1,15 +1,15 @@
 [submodule "st"]
 	path = st
-	url = git@github.com:dpulpeiro/st.git
+	url = https://github.com/dpulpeiro/st
 [submodule "dwm"]
 	path = dwm
-	url = git@github.com:dpulpeiro/dwm.git
+	url = https://github.com/dpulpeiro/dwm
 [submodule "dwmblocks"]
 	path = dwmblocks
-	url = git@github.com:dpulpeiro/dwmblocks.git
+	url = https://github.com/dpulpeiro/dwmblocks
 [submodule "dmenu"]
 	path = dmenu
-	url = git@github.com:dpulpeiro/dmenu.git
+	url = https://github.com/dpulpeiro/dmenu
 [submodule "pamixer"]
 	path = pamixer
-	url = git@github.com:cdemoulins/pamixer.git
+	url = https://github.com/cdemoulins/pamixer
