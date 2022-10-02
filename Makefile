@@ -21,6 +21,7 @@ deps/apt:
 		libnotify-bin \
 		unifont \
 		fonts-noto-color-emoji \
+		libcxxopts-dev \
 		libfontconfig-dev \
 		dunst
 

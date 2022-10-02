@@ -1,4 +1,0 @@
-#!/bin/bash
-cp /etc/X11/xorg_nvidia.conf  /etc/X11/xorg.conf
-(cd /opt/dpulpeiro-de/st && cp config_nvidia.h config.h && make install)
-systemctl restart nodm
