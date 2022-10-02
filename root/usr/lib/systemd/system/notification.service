@@ -1,0 +1,13 @@
+[Unit]
+Description=Notification daemon for notification-send
+After=nodm.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/usr/lib/notification-daemon/notification-daemon
+
+[Install]
+WantedBy=defalut.target

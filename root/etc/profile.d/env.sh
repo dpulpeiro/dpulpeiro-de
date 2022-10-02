@@ -1,2 +1,4 @@
-export PATH="$PATH:/usr/local/bin/dwmscripts"
-export PATH="$PATH:/usr/local/bin/dwmscripts/statusbar"
+# Use this file for general PATH exports
+export TERMINAL=st
+
+#export PATH="$PATH:/usr/local/bin/dwmscripts"

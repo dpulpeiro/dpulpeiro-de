@@ -7,7 +7,7 @@ fi
 
 export GPU_ID=`nvidia-smi -a | grep UUID | awk '{print substr($4,0,12)}'`
 
-if [[ $distributions =~ $distribution ]]; then
+if [[ $distributions == *"$distribution"* ]]; then
 	echo "Installing nvidia-container-runtime for distribution '$distribution'"
 else
 	echo "Distribution '$distribution' not found in distribtutions:"

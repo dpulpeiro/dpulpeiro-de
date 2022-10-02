@@ -1,15 +1,21 @@
 [submodule "st"]
 	path = st
-	url = https://github.com/dpulpeiro/st
+	url = git@github.com:dpulpeiro/st.git
 [submodule "dwm"]
 	path = dwm
-	url = https://github.com/dpulpeiro/dwm
+	url = git@github.com:dpulpeiro/dwm.git
 [submodule "dwmblocks"]
 	path = dwmblocks
-	url = https://github.com/dpulpeiro/dwmblocks
+	url = git@github.com:dpulpeiro/dwmblocks.git
 [submodule "dmenu"]
 	path = dmenu
-	url = https://github.com/dpulpeiro/dmenu
+	url = git@github.com:dpulpeiro/dmenu.git
+[submodule "libxft-bgra"]
+	path = libxft-bgra
+	url = git@github.com:dpulpeiro/libxft-bgra.git
 [submodule "pamixer"]
 	path = pamixer
-	url = https://github.com/cdemoulins/pamixer
+	url = git@github.com:dpulpeiro/pamixer.git
+[submodule "fonts"]
+	path = fonts
+	url = git@github.com:dpulpeiro/fonts.git
