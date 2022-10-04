@@ -1,0 +1,8 @@
+#!/bin/bash
+xorg_file="/etc/X11/xorg.conf"
+xorg_1080_file="/etc/X11/xorg_1080.conf"
+
+cp $xorg_1080_file $xorg_file
+sed "s:export GDK_SCALE.*:export GDK_SCALE=1:g" -i /etc/profile.d/env.sh
+(cd /opt/dpulpeiro-de/st && cp config_1080.h config.h && make install >/dev/null 2>&1)
+systemctl restart nodm

@@ -5,11 +5,11 @@ xorg_4k_file="/etc/X11/xorg_4k.conf"
 
 if cmp -s "$xorg_file" "$xorg_1080_file"; then
 	cp $xorg_4k_file $xorg_file
-	sed "s:export GDK_SCALE.*:export GDK_SCALE=2.5:g" -i /etc/profile.d/env.sh
-	(cd /opt/dpulpeiro-de/st && cp config_4k.h config.h && make install)
+	sed "s:export GDK_SCALE.*:export GDK_SCALE=2:g" -i /etc/profile.d/env.sh
+	(cd /opt/dpulpeiro-de/st && cp config_4k.h config.h && make install >/dev/null 2>&1)
 else
 	cp $xorg_1080_file $xorg_file
 	sed "s:export GDK_SCALE.*:export GDK_SCALE=1:g" -i /etc/profile.d/env.sh
-	(cd /opt/dpulpeiro-de/st && cp config_1080.h config.h && make install)
+	(cd /opt/dpulpeiro-de/st && cp config_1080.h config.h && make install >/dev/null 2>&1)
 fi
 systemctl restart nodm

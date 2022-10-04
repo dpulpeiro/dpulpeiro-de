@@ -1,0 +1,8 @@
+#!/bin/bash
+xorg_file="/etc/X11/xorg.conf"
+xorg_4k_file="/etc/X11/xorg_4k.conf"
+
+cp $xorg_4k_file $xorg_file
+sed "s:export GDK_SCALE.*:export GDK_SCALE=2:g" -i /etc/profile.d/env.sh
+(cd /opt/dpulpeiro-de/st && cp config_4k.h config.h && make install >/dev/null 2>&1 )
+systemctl restart nodm
