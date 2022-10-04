@@ -28,8 +28,12 @@ deps/apt:
 
 deps/libxft:
 	( cd libxft-bgra && \
-		sh autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man && \
-		make install)
+		sh autogen.sh \
+			--sysconfdir=/opt/dpulpeiro-de/libxft-bgra/debian/deb/etc \
+			--prefix=/opt/dpulpeiro-de/libxft-bgra/debian/deb/usr \
+			--mandir=/opt/dpulpeiro-de/libxft-bgra/debian/deb/usr/share/man && \
+		make install && cd debian && make install)
+
 
 deps/pamixer: 
 	(cd pamixer && meson setup build && meson compile -C build&& meson install -C build)
