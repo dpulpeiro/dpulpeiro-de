@@ -13,6 +13,7 @@ deps/apt:
 		cmake \
 		sudo \
 		nodm \
+		xorg \
 		fuse \
 		vim \
 		libharfbuzz-dev \
@@ -36,9 +37,10 @@ deps/libxft:
 
 
 deps/pamixer: 
-	(cd pamixer && meson setup build && meson compile -C build&& meson install -C build)
+	(cd pamixer && ( rm -rf build ||true )&& meson setup build && meson compile -C build&& meson install -C build)
 deps/fonts:
 	(cd fonts && ./install.sh )
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 	
 deps/docker:
 	curl -fsSL get.docker.com | bash
