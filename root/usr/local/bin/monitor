@@ -1,0 +1,31 @@
+#!/bin/bash
+
+xorg_file="/etc/X11/xorg.conf"
+
+if [ "$1" == "4k" ]; then
+  xorg_src_file="/etc/X11/xorg_4k.conf"
+  gdk_scale=2
+  config_file="config_4k.h"
+elif [ "$1" == "1080" ]; then
+  xorg_src_file="/etc/X11/xorg_1080.conf"
+  gdk_scale=1
+  config_file="config_1080.h"
+else
+  echo "Usage: $0 {4k|1080}"
+  exit 1
+fi
+
+# XORG
+cp $xorg_src_file $xorg_file
+# GDK_SCALE
+for user_dir in /home/*; do
+  if [ -d "$user_dir" ]; then
+    sed "s:export GDK_SCALE.*:export GDK_SCALE=2:g" -i "$user_dir/.xsession"
+  fi
+done
+
+# TERMINAL
+(cd /opt/dpulpeiro-de/st && cp $config_file config.h && make install >/dev/null 2>&1)
+
+# NVIDIA
+nvidia-xconfig --prime
